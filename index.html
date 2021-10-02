@@ -190,7 +190,7 @@
             <div class="date">17 Mar</div>
             <i class="icon fa fa-running"></i>
             <div class="content">
-                <h2 class="text-break title-2">ECU</h2>
+                <h2 class="text-break title-2">ECU - Maharat Google</h2>
                 <p>
                     Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id
                     luctus erat sagittis non. Ut blandit semper pretium.
@@ -270,10 +270,82 @@
         Recruitment 20
     </h1>
 
+    <div class="slides" id="recruitment-slider">
+        <button class="slider-button btn" onclick="nextSlide(-1, 'recruitment')">&#10094;</button>
+        <button class="slider-button btn" onclick="nextSlide(1, 'recruitment')">&#10095;</button>
+    </div>
 
 
+    <!--Orientation 20 Slider-->
+    <h1 class="title title-2">
+        <img class="logo" src="./img/minders-x-superhero.png" />
+        Orientation 20
+    </h1>
+
+    <div class="slides" id="orientation-slider">
+        <button class="slider-button btn" onclick="nextSlide(-1, 'orientation')">&#10094;</button>
+        <button class="slider-button btn" onclick="nextSlide(1, 'orientation')">&#10095;</button>
+    </div>
+
+
+    <!-- ECU - Maharat Google Slider -->
+
+    <h1 class="title title-2">
+        <img class="logo" src="./img/minders-x-superhero.png" />
+        ECU - Maharat Google
+    </h1>
+    <div class="slides" id="ecu-slider">
+        <button class="slider-button btn" onclick="nextSlide(-1, 'ecu')">&#10094;</button>
+        <button class="slider-button btn" onclick="nextSlide(1, 'ecu')">&#10095;</button>
+    </div>
+
+
+    <!-- General Training Slider -->
+
+    <h1 class="title title-2">
+        <img class="logo" src="./img/minders-x-superhero.png" />
+        General Training
+    </h1>
+    <div class="slides" id="general-slider">
+        <button class="slider-button btn" onclick="nextSlide(-1, 'general')">&#10094;</button>
+        <button class="slider-button btn" onclick="nextSlide(1, 'general')">&#10095;</button>
+    </div>
+
+
+    <!-- BUE Spark Slider -->
+
+    <h1 class="title title-2">
+        <img class="logo" src="./img/minders-x-superhero.png" />
+        BUE - Spark
+    </h1>
+    <div class="slides" id="spark-slider">
+        <button class="slider-button btn" onclick="nextSlide(-1, 'spark')">&#10094;</button>
+        <button class="slider-button btn" onclick="nextSlide(1, 'spark')">&#10095;</button>
+    </div>
+
+
+    <!-- First Step Slider -->
+
+    <h1 class="title title-2">
+        <img class="logo" src="./img/minders-x-superhero.png" />
+        First Step
+    </h1>
+    <div class="slides" id="first-step-slider">
+        <button class="slider-button btn" onclick="nextSlide(-1, 'first-step')">&#10094;</button>
+        <button class="slider-button btn" onclick="nextSlide(1, 'first-step')">&#10095;</button>
+    </div>
 
     
+    <!-- Closing Slider -->
+
+    <h1 class="title title-2">
+        <img class="logo" src="./img/minders-x-superhero.png" />
+        Season 20 Closing
+    </h1>
+    <div class="slides" id="closing-slider">
+        <button class="slider-button btn" onclick="nextSlide(-1, 'closing')">&#10094;</button>
+        <button class="slider-button btn" onclick="nextSlide(1, 'closing')">&#10095;</button>
+    </div>
 
     <!--External scrips-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
@@ -281,6 +353,7 @@
 
     <!--JavaScript-->
     <script src="./js/memories.js"></script>
+    <script src="./js/event.js"></script>
     <script>
         baguetteBox.run(".compact-gallery", { animation: "slideIn" });
     </script>

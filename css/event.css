@@ -204,13 +204,73 @@ body {
     height: 100%;
 }
 
+.slider-item{
+    display: none;
+}
+
+.slider-active{
+    display:block;
+}
+
+.slides{
+    width: 1365px;
+    height: 1365px;
+    margin: 0 auto;
+    max-width: 75vw;
+    max-height: 75vh;
+    background-size: 75vw 75vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#recruitment-slider{
+    background-image: url('../img/recruitment/img1.jpg');
+}
+
+
+#orientation-slider{
+    background-image: url('../img/orientation/img1.jpg');
+}
+
+#ecu-slider{
+    background-image: url('../img/ecu/img1.jpg');
+}
+
+#general-slider{
+    background-image: url('../img/general/img1.jpg');
+}
+
+#spark-slider{
+    background-image: url('../img/spark/img1.jpg');
+}
+
+#first-step-slider{
+    background-image: url('../img/first-step/img1.jpg');
+}
+
+#closing-slider{
+    background-image: url('../img/closing/img1.jpg');
+}
+
+.slider-button{
+    height: 5vh;
+    width: 50px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 500px;
+    margin: 0 40vw;
+    position: relative;
+}
+
+
 @media only screen and (max-width: 365px) {
     .title-2 {
         padding-left: 1%;
-        font-size: 15px;
+        font-size: 2em;
     }
     .title {
-        font-size: 17px;
+        font-size: 2.5em;
     }
     .timeline-container .content p {
         font-size: 14px;
