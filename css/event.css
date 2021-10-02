@@ -1,0 +1,344 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-container {
+    padding: 15px 30px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+}
+
+.timeline-container.left {
+    left: 0;
+}
+
+.timeline-container.right {
+    left: 50%;
+}
+
+.timeline-container::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    right: -8px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.timeline-container.right::after {
+    left: -8px;
+}
+
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    top: calc(50% - 1px);
+    right: 8px;
+    background: #000;
+    z-index: 1;
+}
+
+.timeline-container.right::before {
+    left: 8px;
+}
+
+.timeline-container .date {
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 8px);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.timeline-container.left .date {
+    right: -75px;
+}
+
+.timeline-container.right .date {
+    left: -75px;
+}
+
+.timeline-container .icon {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 9px 0;
+    top: calc(50% - 20px);
+    background: #ffd401;
+    border: 2px solid #000;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffd401;
+    z-index: 1;
+}
+
+.timeline-container.left .icon {
+    right: 56px;
+}
+
+.timeline-container.right .icon {
+    left: 56px;
+}
+
+.timeline-container .content {
+    padding: 30px 90px 30px 30px;
+    background: #ffd401;
+    position: relative;
+    border-radius: 500px;
+}
+
+.timeline-container.right .content {
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px;
+}
+
+.timeline-container .content h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: normal;
+    color: #000;
+}
+
+.timeline-container .content p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 22px;
+    color: #000;
+}
+
+.title {
+    text-align: center;
+    color: #000;
+}
+
+.line {
+    width: 75%;
+    height: fit-content;
+    margin: 2% auto;
+    border: 1px double #000;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px 1px #3b3b3b;
+}
+
+.inner-line {
+    padding: 0;
+    background-color: #ffd401;
+    background-blend-mode: multiply;
+    box-sizing: border-box;
+    margin: 0 auto;
+    height: 1px;
+    border: none;
+    width: 75%;
+}
+
+@media (max-width: 767.98px) {
+    .timeline::after {
+        left: 90px;
+    }
+
+    .timeline-container {
+        width: 100%;
+        padding-left: 120px;
+        padding-right: 3px;
+    }
+
+    .timeline-container.right {
+        left: 0%;
+    }
+
+    .timeline-container.left::after,
+    .timeline-container.right::after {
+        left: 82px;
+    }
+
+    .timeline-container.left::before,
+    .timeline-container.right::before {
+        left: 100px;
+        border-color: transparent #000 transparent transparent;
+    }
+
+    .timeline-container.left .date,
+    .timeline-container.right .date {
+        right: auto;
+        left: 10px;
+    }
+
+    .timeline-container.left .icon,
+    .timeline-container.right .icon {
+        right: auto;
+        left: 146px;
+    }
+
+    .timeline-container.left .content,
+    .timeline-container.right .content {
+        padding: 30px 30px 30px 90px;
+        border-radius: 500px;
+    }
+}
+
+.slider-parent-container {
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+}
+
+.slider-container {
+    height: 300px;
+    width: 75vw;
+    max-width: 100%;
+    background: #000;
+    box-shadow: 5px 5px 5px #ffd401 inset;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.slider-container .btn {
+    position: absolute;
+    top: calc(50% - 30px);
+    height: 30px;
+    width: 30px;
+    border-left: 8px solid #fff;
+    border-top: 8px solid #fff;
+    background-color: #ffd401;
+}
+
+.slider-container .btn:hover {
+    transform: scale(1.2);
+}
+
+.slider-container .btn.inactive {
+    border-color: #ffd401;
+}
+
+.slider-container .btn:first-of-type {
+    transform: rotate(-45deg);
+    left: 10px;
+}
+
+.slider-container .btn:last-of-type {
+    transform: rotate(135deg);
+    right: 10px;
+}
+
+.slider-container .slider {
+    display: flex;
+    width: 1000%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.slider-container .slider .slide {
+    height: fit-content;
+    width: fit-content;
+    margin: auto 10px;
+    box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+    display: grid;
+    place-items: center;
+}
+
+.slider-container .slider .slide span {
+    color: white;
+    height: 100%;
+    width: 100%;
+    font-size: 150px;
+}
+
+.slide>span>img{
+    width: 100%;
+}
+
+@media only screen and (min-width: 1100px) {
+    .slider-container .slider .slide {
+        width: calc(2.5% - 20px);
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .slider-container .slider .slide {
+        width: calc(3.3333333% - 20px);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .slider-container .slider .slide {
+        width: calc(5% - 20px);
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .slider-container .slider .slide {
+        width: calc(10% - 20px);
+    }
+}
+
+@media only screen and (max-width: 365px){
+    .title-2{
+        padding-left: 1%;
+        font-size: 15px;
+    }
+    .title{
+        font-size: 17px;
+    }
+    .timeline-container .content p{
+        font-size: 14px;
+    }
+    .logo{
+        height: 75px;
+        width: 75px;
+    }
+}
+
+.title-2{
+    text-align: left;
+    padding-left: 2%;
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+}
